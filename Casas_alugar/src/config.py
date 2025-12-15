@@ -1,7 +1,7 @@
 import os
 
 # ==============================================================================
-# CONFIGURAÇÃO - IMOBILIÁRIA IMPULSA (V 2.0 - COM BAIRRO E TIPO)
+# CONFIGURAÇÃO - IMOBILIÁRIA IMPULSA (V 3.0)
 # ==============================================================================
 
 # --- IDENTIDADE ---
@@ -14,7 +14,6 @@ INPUT_DIR = os.path.join(BASE_DIR, 'dados', 'input')
 ARQUIVO_PROCESSADO = os.path.join(INPUT_DIR, 'imoveis_processados.csv')
 
 # --- DEFINIÇÃO DO SCHEMA ---
-# Agora incluindo 'Tipo Imóvel' e 'Bairro'
 COLUNAS_OFICIAIS = [
     'ID', 
     'Cidade', 
@@ -29,7 +28,8 @@ COLUNAS_OFICIAIS = [
     'IPTU', 
     'Seguro',
     'Tipo Imóvel',
-    'Bairro'
+    'Bairro',
+    'Estado'
 ]
 
 # --- TIPAGEM ---
@@ -45,5 +45,4 @@ COLUNAS_NUMERICAS = {
     'Seguro': 'float64'
 }
 
-# Adicionei os novos campos aqui para serem padronizados (Title Case)
-COLUNAS_TEXTO = ['Cidade', 'Aceita Animais', 'Mobilhado', 'Tipo Imóvel', 'Bairro']
+COLUNAS_TEXTO = ['Cidade', 'Aceita Animais', 'Mobilhado', 'Tipo Imóvel', 'Bairro', 'Estado']
